@@ -1,0 +1,34 @@
+{
+    "name": "tacoberu/latte-qrcode",
+    "description": "Latte |qrcode supporting.",
+    "type": "library",
+    "require": {
+    	"php" : ">=7.4.0",
+    	"latte/latte": ">=2.4",
+        "bacon/bacon-qr-code": "^3.0",
+        "jeroendesloovere/vcard": "^1.7"
+    },
+    "require-dev": {
+		"phpunit/phpunit": "^11.0",
+        "tracy/tracy": "^2.4",
+        "phpstan/phpstan": "^1.11"
+    },
+    "authors": [
+        {
+            "name": "Martin Takáč",
+            "email": "martin@takac.name"
+        }
+    ],
+	"autoload": {
+		"classmap": ["libs/"]
+    },
+	"scripts": {
+		"phpunit": [
+			"vendor/bin/phpunit"
+		],
+		"phpstan": [
+			"vendor/bin/phpstan analyse --memory-limit=512M"
+		]
+	},
+    "license": "MIT"
+}
